@@ -1,0 +1,7 @@
+// https://tools.ietf.org/html/rfc4861#section-4.6.4
+interface Mtu : Option {
+	const byte MtuOptiontype = 5;
+	const byte MtuOptionLength = 1;
+	const unsigned short reserved;
+	const long mtu;
+}

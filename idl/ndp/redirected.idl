@@ -1,0 +1,7 @@
+// https://tools.ietf.org/html/rfc4861#section-4.6.3
+interface Redirected : Option {
+	const byte RedirectedOptionType = 4;
+	const long long reserved; // 24 bits
+	const ByteString packet; // [ed: some naming liberties taken]
+	
+}

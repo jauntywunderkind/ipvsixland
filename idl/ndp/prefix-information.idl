@@ -1,0 +1,14 @@
+// https://tools.ietf.org/html/rfc4861#section-4.6.2
+interface PrefixInformation : Option {
+	const byte PrefixInformationOptionType = 3;
+	const byte PrefixInformationOptionLength = 4;
+	attributes byte prefixLength;
+	attributes bool link;
+	attributes bool autonomous;
+	attributes byte reserved;
+	attributes unsigned long validLifetime;
+	attributes unsigned long preferredLifetime;
+	attributes unsigned long reserved; // ed: i don't make this up
+	attributes long long prefixTop;;
+	attributes long long prefixBottom;
+};
