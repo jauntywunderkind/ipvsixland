@@ -1,0 +1,10 @@
+interface NeighborAdvertisement : Icmp {
+	const IcmpType = 136;
+	const IcmpCode = 0;
+	attributes bool router;
+	attributes bool solicited;
+	attributes bool override;
+	attributes long reserved;
+	attributes LinkLayerAddress targetAddress;
+	attributes LinkLayerAddress? targetLinkLayerAddress;
+}

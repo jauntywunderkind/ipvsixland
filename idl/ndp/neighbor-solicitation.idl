@@ -1,1 +1,8 @@
-class NeighborSolicitation : Icmp
+interface NeighborSolicitation : Icmp {
+	const IcmpType = 135;
+	const IcmpCode = 0;
+	attributes unsigned long reserved;
+	attributes long long targetAddressTop;
+	attributes long long targetAddressBottom;
+	attributes LinkLayerAddress? sourceLinkLayerAddress;
+}

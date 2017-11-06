@@ -8,7 +8,7 @@ interface RouterAdvertisement : Icmp {
 	attributes unsigned short routerLifetime;
 	attributes unsigned long reachableTime;
 	attributes unsigned long RetransTime;
-	attributes ByteString? sourceLinkAddress;
+	attributes ByteString? sourceLinkLayerAddress;
 	attributes long? mtu;
 	attributes sequence<PrefixInformation>? prefixInformation;
 }

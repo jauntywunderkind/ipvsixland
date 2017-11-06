@@ -1,0 +1,7 @@
+interface LinkLayerAddress {
+	const SourceType = 1;
+	const TargetType = 2;
+	attributes byte type;
+	attributes byte length;
+	attributes ByteString linkLayerAddress;
+}
