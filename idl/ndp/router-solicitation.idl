@@ -1,3 +1,4 @@
+// https://tools.ietf.org/html/rfc4861#section-4.1
 interface RouterSolicitation : Icmp {
 	const IcmpType = 133;
 	const IcmpCode = 0;

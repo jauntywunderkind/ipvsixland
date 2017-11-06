@@ -1,3 +1,4 @@
+// https://tools.ietf.org/html/rfc4861#section-4.2
 interface RouterAdvertisement : Icmp {
 	const IcmpType = 134;
 	const IcmpCode = 0;

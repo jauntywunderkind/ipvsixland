@@ -1,3 +1,4 @@
+// https://tools.ietf.org/html/rfc4861#section-4.4
 interface NeighborAdvertisement : Icmp {
 	const IcmpType = 136;
 	const IcmpCode = 0;
