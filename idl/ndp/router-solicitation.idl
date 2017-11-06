@@ -1,0 +1,5 @@
+interface RouterSolicitation : Icmp {
+	const IcmpType = 133;
+	const IcmpCode = 0;
+	attributes LinkLayerAddress? sourceLinkLayerAddress;
+}

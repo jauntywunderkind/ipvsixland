@@ -1,0 +1,14 @@
+interface RouterAdvertisement : Icmp {
+	const IcmpType = 134;
+	const IcmpCode = 0;
+	attributes byte currentHopLimit;
+	attributes boolean managed;
+	attributes boolean other;
+	attributes byte reserved;
+	attributes unsigned short routerLifetime;
+	attributes unsigned long reachableTime;
+	attributes unsigned long RetransTime;
+	attributes ByteString? sourceLinkAddress;
+	attributes long? mtu;
+	attributes sequence<PrefixInformation>? prefixInformation;
+}
