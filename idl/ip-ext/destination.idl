@@ -1,0 +1,4 @@
+interface DestinationOption : Options {
+	const DestinationOptionNextHeaderValue = 60;
+	attribute ByteString Options;
+};

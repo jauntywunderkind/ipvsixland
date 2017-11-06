@@ -1,0 +1,3 @@
+interface NoNextHeader : IpHeader {
+	const NoNextHeaderValue = 59;
+};

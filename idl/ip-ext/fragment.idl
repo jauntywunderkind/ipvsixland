@@ -1,0 +1,8 @@
+interface FragmentHeader : IpHeader {
+	const byte FragmentNextHeaderValue = 44;
+	attribute byte reserved;
+	attribute unsigned short fragmentOffset;
+	attribute byte res;
+	attribute bool m;
+	attribute unsigned long identification;
+};
