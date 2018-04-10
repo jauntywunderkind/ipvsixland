@@ -19,6 +19,7 @@ import fragment from "./ip-ext/fragment"
 import authentication from "./ip-ext/authentication"
 import esp from "./ip-ext/esp"
 
+// https://tools.ietf.org/html/rfc8200#section-4.1
 const headerOrder= [
 	ip,
 	hopByHop,

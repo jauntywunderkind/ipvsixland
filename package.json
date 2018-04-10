@@ -1,6 +1,6 @@
 {
 	"name": "ipvsixland",
-	"version": "1.0.0",
+	"version": "6.0.0",
 	"description": "Specifications for an IPv6 substrate for the browser.",
 	"main": "ipvsixland.js",
 	"scripts": {
@@ -8,9 +8,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://archive.voodoowarez.com/ipvsixland"
+		"url": "https://6.voodoowarez.com/"
 	},
-	"keywords": ["ipv6", "ipvsixland", "ipv6 land"],
-	"author": "rektide de la faye",
-	"license": "X11"
+	"keywords": ["ipv6", "ipvsixland", "ipv6 land", "ipv6-land"],
+	"author": "jauntywunderkind",
+	"license": "MIT"
 }
