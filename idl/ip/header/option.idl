@@ -1,0 +1,19 @@
+// https://tools.ietf.org/html/rfc8200#section-4.2
+interface Option {
+	attribute byte optionType;
+	attribute byte optionDataLen;
+	// attribute ByteString optionData // specific implementations will have their own alternative forms for this
+
+	// what to do if optionType is not recognized
+	[BitStart=6,BitPicks="optionType"]
+	attribute u2 unknownAction;
+	[BitStart=5,BitPicks="optionType"]
+	attribute bool mayChange;
+};
+
+dictionary UnknownAction {
+	const byte skip = 0;
+	const byte discard = 1;
+	const byte parameterProblem = 2;
+	const byte parameterProblemNoMulticast = 3;
+};

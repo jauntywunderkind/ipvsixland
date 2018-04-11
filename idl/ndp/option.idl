@@ -1,14 +1,15 @@
 // https://tools.ietf.org/html/rfc4861#section-4.6
 // [ed: i expect this more or less works like ip-ext/option but has types? this is an "extension" idl"]
-interface Option : IpHeader {
-	enum OptionTypeNdp { "SourceLinkLayerAddress", "TargetLinkLayerAddress", "PrefixInformation", "RedirectHeader", "MTU" };
-	enum OptionTypeNdpBase = 1; // o/ best intentions
-	const unsigned short TypeSourceLinkLayerAddress = 1;
-	const unsigned short TypeTargetLinkLayerAddress = 2;
-	const unsigned short TypePrefixInformation = 3;
-	const unsigned short TypeRedirectHeader = 4;
-	const unsigned short TypeMTU = 5;
-}
+interface Option {
+	[Values="OptionType"]
+	attribute byte optionType;
+	attribute byte optionLength;
+};
 
-
-
+dictionary OptionType {
+	byte SourceLinkLayerAddress = 1;
+	byte TargetLinkLayerAddress = 2;
+	byte PrefixInformation = 3;
+	byte RedirectedHeader = 4;
+	byte MTU = 5;
+};

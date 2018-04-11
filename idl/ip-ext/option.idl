@@ -1,7 +1,0 @@
-interface Option : IpHeader {
-	attribute byte optionType;
-	attribute byte optDataLen;
-	// attribute ByteString optionData // specific implementations will have their own alternative forms for this
-};
-
-enum OptionAction { "skip", "discard", "multicast", "icmp" };

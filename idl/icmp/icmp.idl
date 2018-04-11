@@ -1,0 +1,32 @@
+// https://tools.ietf.org/html/rfc4443#section-2.1
+interface Icmp {
+	const byte nextHeader = 58;
+
+	attribute byte icmpType;
+	attribute byte icmpCode;
+	attribute u16 checksum;
+	// derived messages mask this block
+	attribute u32 firstBlock;
+
+	// first bit of icmpType indicates error. Picks, not masks!
+	[BitStart=7,BitPicks="icmpType"]
+	attribute bool error;
+};
+
+dictionary IcmpErrorMessages {
+	byte DestinationUnreachable = 1;
+	byte PacketTooBig = 2;
+	byte TimeExceeddd = 3;
+	byte ParameterProblem = 4;
+	byte PrivateExperimentation = 100
+	byte PrivateExperimentation2 = 101
+	byte ExpandedError = 127
+};
+
+dictionary IcmpInformationalMessage {
+	byte EchoRequest = 128;
+	byte EchoReply = 129;
+	byte PrivateExperimentation = 200;
+	byte PrivateExperimentaiton2 = 201;
+	byte ExpandedInformational = 256;
+};

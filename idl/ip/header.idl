@@ -1,0 +1,12 @@
+interface IpHeader {
+	[BitStart=0,BitMasks="flowLabel"]
+	attribute nibble version;
+	[BitStart=4,BitMasks="flowLabel"]
+	attribute byte trafficClass;
+	attribute u32 flowLabel;
+	attribute u16 payloadLength;
+	attribute byte nextHeader;
+	attribute byte hopLimit;
+	attribute LinkLayerAddress sourceAddress;
+	attribute LinkLayerAddress destinationAddress;
+};

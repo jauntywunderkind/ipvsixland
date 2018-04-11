@@ -1,5 +1,6 @@
-interface FragmentHeader : IpHeader {
-	const byte FragmentNextHeaderValue = 44;
+// https://tools.ietf.org/html/rfc8200#section-4.5
+interface Fragment : Header {
+	const byte nextHeader = 44;
 	attribute byte reserved;
 	attribute unsigned short fragmentOffset;
 	attribute byte res;

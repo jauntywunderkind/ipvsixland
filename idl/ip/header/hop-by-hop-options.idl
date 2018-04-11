@@ -1,0 +1,4 @@
+// https://tools.ietf.org/html/rfc8200#section-4.3
+interface HopByHopOptions : OptionsHeader {
+	const byte nextHeader = 0;
+};

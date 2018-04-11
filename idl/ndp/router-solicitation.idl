@@ -1,6 +1,6 @@
 // https://tools.ietf.org/html/rfc4861#section-4.1
 interface RouterSolicitation : Icmp {
-	const IcmpType = 133;
-	const IcmpCode = 0;
-	attributes LinkLayerAddress? sourceLinkLayerAddress;
-}
+	const byte IcmpType = 133;
+	const byte IcmpCode = 0;
+	attributes SourceLinkLayerAddress? sourceAddress;
+};

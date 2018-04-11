@@ -1,4 +1,0 @@
-interface HopByHopHeader : Option {
-	const byte HopByHopNextHeaderValue = 0;
-	attribute ByteString options;
-};

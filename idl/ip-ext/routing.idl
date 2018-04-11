@@ -1,6 +1,0 @@
-interface RoutingHeader : Option {
-	const byte RoutingNextHeaderValue = 43;
-	attribute byte routingType;
-	attribute byte segmentsLeft;
-	attribute ByteString data;
-};

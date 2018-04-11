@@ -1,9 +1,15 @@
 // https://tools.ietf.org/html/rfc4861#section-4.6.1
 // "Source/Target" Link-layer Address hereby shortened to LinkLayerAddress
-interface LinkLayerAddress {
-	const SourceLinkLayerAddressOptionType = 1;
-	const TargetLinkLayerAddressOptionType = 2;
-	attributes byte type;
-	attributes byte length;
-	attributes ByteString linkLayerAddress;
-}
+typedef u128 LinkLayerAddress;
+
+dictionary LinkLayerAddressType {
+	u8 Source = 1;
+	u8 Target = 2;
+};
+
+interface SourceLinkLayerAddress : LinkLayerAddress {
+	const byte Type = 2;
+};
+interface TargetLinkLayerAddress : LinkLayerAddress {
+	const byte Type = 3;
+};

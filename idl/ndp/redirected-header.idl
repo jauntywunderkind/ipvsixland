@@ -1,6 +1,6 @@
 // https://tools.ietf.org/html/rfc4861#section-4.6.3
 interface Redirected : Option {
-	const byte optionType = 5;
+	const byte OptionType = 5;
 	attribute u8 reserved;
 	attribute u16 reserved2;
 }

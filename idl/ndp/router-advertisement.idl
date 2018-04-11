@@ -1,15 +1,20 @@
 // https://tools.ietf.org/html/rfc4861#section-4.2
 interface RouterAdvertisement : Icmp {
-	const IcmpType = 134;
-	const IcmpCode = 0;
-	attributes byte currentHopLimit;
-	attributes boolean managed;
-	attributes boolean other;
-	attributes byte reserved;
-	attributes unsigned short routerLifetime;
-	attributes unsigned long reachableTime;
-	attributes unsigned long RetransTime;
-	attributes ByteString? sourceLinkLayerAddress;
-	attributes long? mtu;
+	const byte IcmpType = 134;
+	const byte IcmpCode = 0;
+	attribute byte currentHopLimit;
+	[Alias=M,BitStart=0,BitMasks=reserved]
+	attribute bool managed;
+	[Alias=O,BitStart=1,BitMasks=reserved]
+	attribute bool other;
+	attribute byte reserved;
+	[Unit=seconds]
+	attributes u16 routerLifetime;
+	[Unit=ms]
+	attributes u32 reachableTime;
+	[Unit=ms]
+	attributes u32 retransTime;
+	attributes SourceLinkLayerAddress sourceAddress;
+	attributes u32? mtu;
 	attributes sequence<PrefixInformation>? prefixInformation;
-}
+};

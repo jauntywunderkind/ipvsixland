@@ -1,0 +1,2 @@
+// https://tools.ietf.org/html/rfc8200#section-4.1
+enum HeaderOrder { "Ipv6", "HopByHopOptions", "DestinationOptions", "Routing", "Fragment", "Authentication", "Esp" };

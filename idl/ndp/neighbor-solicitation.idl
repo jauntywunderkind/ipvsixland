@@ -1,9 +1,13 @@
 // https://tools.ietf.org/html/rfc4861#section-4.3
 interface NeighborSolicitation : Icmp {
-	const IcmpType = 135;
-	const IcmpCode = 0;
-	attributes unsigned long reserved;
-	attributes long long targetAddressTop;
-	attributes long long targetAddressBottom;
-	attributes LinkLayerAddress? sourceLinkLayerAddress;
+	const byte Type = 135;
+	const byte Code = 0;
+	[Match]
+	attribute byte type = 135;
+	[Match]
+	attribute byte code = 0;
+
+	attribute u32 reserved;
+	attribute TargetLinkLayerAddress targetAddress;
+	attribute SourceLinkLayerAddress? sourceAddress;
 }

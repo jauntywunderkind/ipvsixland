@@ -1,0 +1,7 @@
+// https://tools.ietf.org/html/rfc8200#section-4.4
+interface Routing : Header {
+	const byte nextHeader = 43;
+	attribute byte routingType;
+	attribute byte segmentsLeft;
+	attribute ByteString data;
+};

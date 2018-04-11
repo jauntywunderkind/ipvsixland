@@ -1,0 +1,4 @@
+// https://tools.ietf.org/html/rfc8200#section-4.7
+interface NoNext : Header {
+	const byte nextHeader = 59;
+};
